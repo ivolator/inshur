@@ -11,8 +11,19 @@ import java.util.Map;
  * Simplified representation of the OpenWeather API response
  */
 public class Day {
+    /**
+     * humidity
+     */
     protected Float humidity;
+
+    /**
+     * Max day temp
+     */
     protected Float max;
+
+    /**
+     * Time of the forecasted data, Unix, UTC
+     */
     protected Integer dt;
 
     public Day() {
@@ -25,6 +36,9 @@ public class Day {
     }
 
     @JsonProperty("temp")
+    /**
+     * Flatten the json
+     */
     public void getMaxTemp(Map<String, String> temps) {
         this.max = Float.valueOf(temps.get("max"));
     }
