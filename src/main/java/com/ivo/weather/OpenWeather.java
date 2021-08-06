@@ -6,8 +6,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ivo.weather.dto.Day;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,6 +14,9 @@ import java.util.Optional;
 
 
 @Service
+/**
+ * Contains the API call and Filtering
+ */
 public class OpenWeather {
 
     @Autowired
@@ -26,6 +27,7 @@ public class OpenWeather {
 
     /**
      * Fetch weather data
+     *
      * @param lat
      * @param lng
      * @return Day[]
@@ -43,6 +45,7 @@ public class OpenWeather {
 
     /**
      * Filter out the warmest day
+     *
      * @param days
      * @return Day
      */

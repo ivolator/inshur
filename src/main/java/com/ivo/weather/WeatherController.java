@@ -17,6 +17,9 @@ public class WeatherController {
     OpenWeather openWeather;
 
     @GetMapping("/weather/{lat}/{lng}")
+    /**
+     *
+     */
     public ResponseEntity getWarmestForLocation(@PathVariable String lat, @PathVariable String lng) {
         try {
             Day[] days = openWeather.getWeather(Float.valueOf(lat), Float.valueOf(lng));

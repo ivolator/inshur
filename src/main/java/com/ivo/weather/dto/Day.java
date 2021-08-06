@@ -7,6 +7,9 @@ import org.springframework.boot.jackson.JsonComponent;
 import java.util.Map;
 
 @JsonComponent
+/**
+ * Simplified representation of the OpenWeather API response
+ */
 public class Day {
     protected Float humidity;
     protected Float max;

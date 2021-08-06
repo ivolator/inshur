@@ -15,6 +15,7 @@ public class WeatherUrlBuilder {
 
     /**
      * Simple URL composition
+     *
      * @param lat
      * @param lng
      * @return

@@ -10,8 +10,9 @@ import org.springframework.web.client.RestTemplate;
 public class DemoWeatherApplication {
 
     public static void main(String[] args) {
-    	SpringApplication.run(DemoWeatherApplication.class, args);
+        SpringApplication.run(DemoWeatherApplication.class, args);
     }
+
     @Bean
     public RestTemplate restTemplate(RestTemplateBuilder builder) {
         return builder.build();
